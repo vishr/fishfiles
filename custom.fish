@@ -4,8 +4,8 @@ set -x NODE_PATH /usr/local/lib/node_modules
 set -x NODE_ENV development
 
 # PATH additions
-set -x PATH /usr/local/bin $PATH
-set -x PATH /usr/local/sbin $PATH
+set -x PATH /usr/local/bin $PATH # OS X - Homebrew
+set -x PATH /usr/local/sbin $PATH # OS X - Homebrew
 set -x PATH $PATH /usr/local/share/python
 set -x PATH $PATH /usr/local/share/npm/bin
 
