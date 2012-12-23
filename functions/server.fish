@@ -1,6 +1,6 @@
 function server -d "Start an HTTP server from a directory, \
   optionally specifying the port"
-  set host (eval "ipconfig getifaddr en1")
+  set ip (eval "ipconfig getifaddr en1")
   if [ $argv ]
     set port $argv
   else
@@ -9,7 +9,7 @@ function server -d "Start an HTTP server from a directory, \
 
   python -c "import SimpleHTTPServer; import SocketServer; \
   Handler = SimpleHTTPServer.SimpleHTTPRequestHandler; \
-  httpd = SocketServer.TCPServer(('$host', $port), Handler); \
-  print 'Serving HTTP at http://$host:$port'; \
+  httpd = SocketServer.TCPServer(('$ip', $port), Handler); \
+  print 'HTTP server listening on http://$ip:$port'; \
   httpd.serve_forever();"
 end
