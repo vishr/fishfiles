@@ -17,3 +17,8 @@ set GIT_AUTHOR_EMAIL vishal@qwata.com
 set GIT_COMMITTER_EMAIL $GIT_AUTHOR_EMAIL
 git config --global user.email $GIT_AUTHOR_EMAIL
 git config --global push.default simple
+
+# rbenv
+set -x PATH $HOME/.rbenv/bin $PATH
+set -x PATH $HOME/.rbenv/shims $PATH
+rbenv rehash > /dev/null 2>&1
