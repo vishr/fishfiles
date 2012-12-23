@@ -1,4 +1,5 @@
-function phpserver
+function phpserver -d "Start a PHP server from a directory, \
+  optionally specifying the port"
   set ip (eval "ipconfig getifaddr en1")
   if [ $argv ]
     set port $argv
