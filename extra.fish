@@ -1,5 +1,5 @@
 # Environment variables
-set -x JAVA_HOME `/usr/libexec/java_home`
+set -x JAVA_HOME (/usr/libexec/java_home)
 set -x NODE_PATH /usr/local/lib/node_modules
 set -x NODE_ENV development
 
@@ -16,7 +16,7 @@ git config --global user.name $GIT_AUTHOR_NAME
 set GIT_AUTHOR_EMAIL vishal@qwata.com
 set GIT_COMMITTER_EMAIL $GIT_AUTHOR_EMAIL
 git config --global user.email $GIT_AUTHOR_EMAIL
-git config --global push.default simple
+git config --global credential.helper osxkeychain
 
 # rbenv
 set -x PATH $HOME/.rbenv/bin $PATH

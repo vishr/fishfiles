@@ -6,8 +6,7 @@ function server -d "Start an HTTP server from a directory, \
   else
     set port 1431
   end
-  python -c "
-import sys
+  python -c "import sys
 import SimpleHTTPServer
 import SocketServer
 
